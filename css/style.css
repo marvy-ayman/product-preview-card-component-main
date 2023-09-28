@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Fraunces';
+    border: none;
+}
+:root{
+    --dark-cyan:hsl(158, 36%, 37%);
+    --cream:hsl(30, 38%, 92%);
+    --dark-blue: hsl(212, 21%, 14%);
+    --graish-blue:hsl(228, 12%, 48%);
+    --white:hsl(0, 0%, 100%);
+    --fs-body-smaller: 12px;
+    --fs-body-normal:14px;
+    --fs-heading:18px;
+    --fw-bold:500;
+    --fw-bolder:700;
+}
+body{
+  background-color: var(--white);
+  min-height: 100vh;
+  line-height: 1.6;
+  font-size: var(--fs-body-normal);
+}
+.card-container > *{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5;
+}
+.card-container{
+  background-color: var(--cream);
+  margin: 0 auto;
+}
+ .card-image .image{
+  content: url(../images/image-product-mobile.jpg);
+ }
+
+ .card-content {
+  padding: 1.9em 3em;
+ height: 32em;
+}
+.card-content span{
+ font-family: 'Montserrat';
+ font-weight: var(--fw-bold);
+ text-transform: uppercase;
+ letter-spacing: 5px;
+ color: var(--graish-blue);
+}
+.card-content h2{
+font-size: 2.5rem;
+color: var(--dark-blue);
+line-height: 1.2;
+padding-top: 1.3rem;
+}
+
+.card-content p{
+color: var(--graish-blue);
+font-family: 'Montserrat';
+padding-top: .5rem;
+}
+.price{
+display: flex;
+align-items: center;
+gap: 1.2em;
+}
+del {
+color: var(--graish-blue);
+text-decoration: line-through;
+font-size: var(--fs-body-smaller);
+}
+
+ins {
+font-size: 2rem;
+color: var(--dark-cyan);
+font-weight: bold;
+text-decoration: none;
+}
+button{
+padding: 1rem 1.5rem;
+background-color: var(--dark-cyan);
+cursor: pointer;
+transition: .5s all;
+border-radius: 5px;
+font-size: 1rem;
+color: white;
+font-family: 'Montserrat';
+margin-top: .5rem;
+}
+button:hover{
+background-color: #333f2e;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  @media (min-width:40em) {
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        height: 100%;
+    }
+    
+    .card-container {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        max-width: 700px;
+        border-radius: 0 1em 1em 0;
+        border-radius: 1.5em 1.5em 1.5em 1.5em;
+    }
+
+    .card-container > * {
+        flex-basis: 100%;
+    }
+    .card-image{
+      width: 300px;
+    }
+    .card-image .image{
+      min-height: 46em;
+      width: 400px;
+      border-radius: 1.5em 0 0 1.5em;
+      content: url(../images/image-product-desktop.jpg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: scale(.7);
+    }
+    
+    
+  }
